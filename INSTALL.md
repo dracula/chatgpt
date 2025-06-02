@@ -1,19 +1,12 @@
-### [Foobar](https://foobar.com)
+### [Chat GPT](https://chagpt.com)
 
-#### Install using Git
+#### Install Stylus
 
-If you are a git user, you can install the theme and keep up to date by cloning the repo:
+1. Install the Stylus Extension
 
-```bash
-git clone https://github.com/dracula/foobar.git
-```
+- **Chrome/Edge/Brave**: Install Stylus from the [Chrome Web Store](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)  
+- **Firefox**: Install Stylus from [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/styl-us/).
 
-#### Install manually
-
-Download using the [GitHub `.zip` download](https://github.com/dracula/foobar/archive/main.zip) option and unzip them.
-
-#### Activating theme
-
-1. Do this;
-2. Then that;
-3. Boom! It's working ✨
+2. Visit [Install Theme](https://raw.githubusercontent.com/UniverseKing654/ChatGPT-DraculaTheme/main/chat-gpt.css)
+3. Click the "Install" button
+4. The theme will automatically apply to Chat GPT pages
