@@ -117,7 +117,8 @@
     /* Built-in functions, class, titles*/
     :is(.light .dark, .dark) .hljs-built_in,
     :is(.light .dark, .dark) .hljs-class,
-    :is(.light .dark, .dark) .hljs-title.function_ 
+    :is(.light .dark, .dark) .hljs-title.function_,
+    :is(.light .dark, .dark) .hljs-title
     {
         color: var(--green);
     }
