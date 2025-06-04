@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           ChatGPT Dracula
 @namespace      github.com/UniverseKing654
-@version        1.0.0
+@version        1.0.1
 @description    A dark theme for ChatGPT based on the Dracula color scheme.
 @author         Universe (http://github.com/UniverseKing654)
 ==/UserStyle== */
@@ -80,11 +80,10 @@
         background-color: #0000;
     }
 
-    /* Formulas, keywords and literal */
+    /* Formulas and keywords */
     :is(.light .dark, .dark) .hljs-doctag,
     :is(.light .dark, .dark) .hljs-formula,
-    :is(.light .dark, .dark) .hljs-keyword,
-    :is(.light .dark, .dark) .hljs-literal 
+    :is(.light .dark, .dark) .hljs-keyword
     {
         color: var(--pink);
     }
@@ -109,7 +108,8 @@
 
     /* Numbers and variables */
     :is(.light .dark, .dark) .hljs-number,
-    :is(.light .dark, .dark) .hljs-variable 
+    :is(.light .dark, .dark) .hljs-variable,
+    :is(.light .dark, .dark) .hljs-literal 
     {
         color: var(--purple);
     }
