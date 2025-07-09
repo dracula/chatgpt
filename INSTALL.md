@@ -1,12 +1,18 @@
-### [Chat GPT](https://chagpt.com)
+### [ChatGPT](https://chatgpt.com)
 
-#### Install Stylus
+#### Prerequisites
 
-1. Install the Stylus Extension
+Install the Stylus browser extension first:
 
-- **Chrome/Edge/Brave**: Install Stylus from the [Chrome Web Store](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)  
-- **Firefox**: Install Stylus from [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/styl-us/).
+- **Chrome/Edge/Brave**: [Chrome Web Store](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne);
+- **Firefox**: [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/styl-us/).
 
-2. Visit [Install Theme](https://raw.githubusercontent.com/UniverseKing654/ChatGPT-DraculaTheme/main/chatgpt-dracula.user.css)
-3. Click the "Install" button
-4. The theme will automatically apply to Chat GPT pages
+#### Activating theme
+
+1. **Open the theme file**: Visit [ChatGPT Dracula Theme](https://raw.githubusercontent.com/dracula/chatgpt/main/chatgpt-dracula.user.css);
+
+2. **Install the theme**: Click the "Install" button when prompted by Stylus;
+
+3. **Automatic activation**: The theme will immediately apply to all ChatGPT pages.
+
+> Navigate to [ChatGPT](https://chatgpt.com) to see the new Dracula theme applied automatically. ✨

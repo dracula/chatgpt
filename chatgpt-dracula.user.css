@@ -7,132 +7,116 @@
 ==/UserStyle== */
 
 @-moz-document domain("chatgpt.com") {
+  :root {
+    color-scheme: dark;
+    --background: #282a36;
+    --background-secondary: #2b2640;
+    --background-tertiary: #151320;
+    --currentLine: #44475a;
+    --foreground: #f8f8f2;
+    --comment: #6272a4;
+    --cyan: #8be9fd;
+    --green: #50fa7b;
+    --orange: #ffb86c;
+    --pink: #ff79c6;
+    --purple: #bd93f9;
+    --red: #ff5555;
+    --yellow: #f1fa8c;
+  }
 
-    :root 
-    {
-        color-scheme: dark;
-        --background: #282a36;
-        --background-secondary: #2b2640;
-        --background-tertiary: #151320;
-        --currentLine: #44475a;
-        --foreground: #f8f8f2;
-        --comment: #6272a4;
-        --cyan: #8be9fd;
-        --green: #50fa7b;
-        --orange: #ffb86c;
-        --pink: #ff79c6;
-        --purple: #bd93f9;
-        --red: #ff5555;
-        --yellow: #f1fa8c;
-    }
+  .dark {
+    --sidebar-surface-primary: #2b2640;
+    --bg-elevated-secondary: #2b2640;
+    --main-surface-primary: #282a36;
+    --main-surface-secondary: #151320;
+    --main-surface-tertiary: #6272a4;
+    --bg-primary: #44475a;
+    --message-surface: #44475a;
+  }
 
-    .dark 
-    {
-        --sidebar-surface-primary: #2b2640;
-        --bg-elevated-secondary: #2b2640;
-        --main-surface-primary: #282a36;
-        --main-surface-secondary: #151320;
-        --main-surface-tertiary: #6272a4;
-        --bg-primary: #44475a;
-        --message-surface: #44475a;
+  /* Main Background */
+  .dark\:bg-\[\#303030\]:is(.dark *) {
+    background-color: #44475a;
+  }
 
-    }
+  /* Scroll Bars */
+  .overflow-auto:hover,
+  .overflow-scroll:hover,
+  .overflow-x-auto:hover,
+  .overflow-y-auto:hover {
+    scrollbar-color: var(--comment) transparent;
+  }
 
-    /* Main Background */
-    .dark\:bg-\[\#303030\]:is(.dark *) 
-    {
-        background-color: #44475a;
-    }
+  .overflow-auto,
+  .overflow-scroll,
+  .overflow-x-auto,
+  .overflow-x-scroll,
+  .overflow-y-auto,
+  .overflow-y-scroll {
+    scrollbar-color: var(--comment) transparent;
+  }
 
-    /* Scroll Bars */
-    .overflow-auto:hover,
-    .overflow-scroll:hover,
-    .overflow-x-auto:hover,
-    .overflow-y-auto:hover 
-    {
-        scrollbar-color: var(--comment) transparent;
-    }
+  /* Chat Search */
+  .bg-token-main-surface-primary {
+    background-color: var(--background);
+  }
 
-    .overflow-auto,
-    .overflow-scroll,
-    .overflow-x-auto,
-    .overflow-x-scroll,
-    .overflow-y-auto,
-    .overflow-y-scroll 
-    {
-        scrollbar-color: var(--comment) transparent;
-    }
+  /* Variables in text */
+  .prose :where(code):not(:where([class~="not-prose"] *)) {
+    background-color: var(--background-tertiary);
+  }
 
-    /* Chat Search */
-    .bg-token-main-surface-primary 
-    {
-        background-color: var(--background);
-    }
+  .dark\:prose-invert:is(.dark *)
+    :where(pre):not(:where([class~="not-prose"] *))
+    code {
+    background-color: #0000;
+  }
 
-    /* Variables in text */
-    .prose :where(code):not(:where([class~=not-prose] *)) 
-    {
-        background-color: var(--background-tertiary)
-    }
+  /* Formulas and keywords */
+  :is(.light .dark, .dark) .hljs-doctag,
+  :is(.light .dark, .dark) .hljs-formula,
+  :is(.light .dark, .dark) .hljs-keyword {
+    color: var(--pink);
+  }
 
-    .dark\:prose-invert:is(.dark *) :where(pre):not(:where([class~=not-prose] *)) code 
-    {
-        background-color: #0000;
-    }
+  /* Attributes */
+  :is(.light .dark, .dark) .hljs-attr {
+    color: var(--foreground);
+  }
 
-    /* Formulas and keywords */
-    :is(.light .dark, .dark) .hljs-doctag,
-    :is(.light .dark, .dark) .hljs-formula,
-    :is(.light .dark, .dark) .hljs-keyword
-    {
-        color: var(--pink);
-    }
+  /* Attributes, selectors, variables*/
+  :is(.light .dark, .dark) .hljs-selector-attr,
+  :is(.light .dark, .dark) .hljs-selector-class,
+  :is(.light .dark, .dark) .hljs-selector-pseudo,
+  :is(.light .dark, .dark) .hljs-template-variable,
+  :is(.light .dark, .dark) .hljs-type,
+  :is(.light .dark, .dark) .hljs-variable,
+  :is(.light .dark, .dark) .hljs-tag .hljs-name {
+    color: var(--pink);
+  }
 
-    /* Attributes */
-    :is(.light .dark, .dark) .hljs-attr 
-    {
-        color: var(--foreground)
-    }
+  /* Numbers and variables */
+  :is(.light .dark, .dark) .hljs-number,
+  :is(.light .dark, .dark) .hljs-variable,
+  :is(.light .dark, .dark) .hljs-literal {
+    color: var(--purple);
+  }
 
-    /* Attributes, selectors, variables*/
-    :is(.light .dark, .dark) .hljs-selector-attr,
-    :is(.light .dark, .dark) .hljs-selector-class,
-    :is(.light .dark, .dark) .hljs-selector-pseudo,
-    :is(.light .dark, .dark) .hljs-template-variable,
-    :is(.light .dark, .dark) .hljs-type,
-    :is(.light .dark, .dark) .hljs-variable,
-    :is(.light .dark, .dark) .hljs-tag .hljs-name 
-    {
-        color: var(--pink);
-    }
+  /* Built-in functions, class, titles*/
+  :is(.light .dark, .dark) .hljs-built_in,
+  :is(.light .dark, .dark) .hljs-class,
+  :is(.light .dark, .dark) .hljs-title.function_,
+  :is(.light .dark, .dark) .hljs-title {
+    color: var(--green);
+  }
 
-    /* Numbers and variables */
-    :is(.light .dark, .dark) .hljs-number,
-    :is(.light .dark, .dark) .hljs-variable,
-    :is(.light .dark, .dark) .hljs-literal 
-    {
-        color: var(--purple);
-    }
+  /* Class titles*/
+  :is(.light .dark, .dark) .hljs-title.class_ {
+    color: var(--cyan);
+  }
 
-    /* Built-in functions, class, titles*/
-    :is(.light .dark, .dark) .hljs-built_in,
-    :is(.light .dark, .dark) .hljs-class,
-    :is(.light .dark, .dark) .hljs-title.function_,
-    :is(.light .dark, .dark) .hljs-title
-    {
-        color: var(--green);
-    }
-
-    /* Class titles*/
-    :is(.light .dark, .dark) .hljs-title.class_ 
-    {
-        color: var(--cyan);
-    }
-
-    /* Strings */
-    :is(.light .dark, .dark) .hljs-string 
-    {
-        color: var(--yellow);
-    }
-
+  /* Strings */
+  :is(.light .dark, .dark) .hljs-string {
+    color: var(--yellow);
+  }
 }
