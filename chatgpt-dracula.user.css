@@ -30,11 +30,11 @@
     --main-surface-primary: #282a36;
     --main-surface-secondary: #151320;
     --main-surface-tertiary: #6272a4;
-    --bg-primary: #44475a;
+    --bg-primary: #282a36;
     --message-surface: #44475a;
   }
 
-  /* Main Background */
+  /* Prompt Bar */
   .dark\:bg-\[\#303030\]:is(.dark *) {
     background-color: #44475a;
   }
