@@ -1,121 +1,142 @@
 /* ==UserStyle==
 @name           ChatGPT Dracula
 @namespace      github.com/UniverseKing654
-@version        2.0.0
+@version        2.0.1
 @description    A dark theme for ChatGPT based on the Dracula color scheme.
 @author         Universe (http://github.com/UniverseKing654)
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://chatgpt.com") {
+@-moz-document url-prefix("https://chatgpt.com")
+{
+    :root {
+        --dark-background: #191a21;
+        --background: #282a36;
+        --comment: #6272a4;
+        --selection: #44475a;
+        --cyan: #8be9fd;
+        --orange: #ffb86c;
+        --yellow: #f1fa8c;
+        --pink: #ff79c6;
+        --purple: #bd93f9;
+        --green: #50fa7b;
+    }
 
-	:root {
+    .dark,
+    htlm.dark,
+    htlm.dark[data-oled],
+    html.dark[data-oled] :not(:where(.light, .light *)),
+    html.dark :not(:where(.light, .light *)) {
+        --main-surface-primary: var(--dark-background) !important;
+        --main-surface-secondary: var(--background);
+        --sidebar-surface-primary: var(--dark-background);
+        --bg-primary: var(--background);
+        --bg-secondary: var(--selection);
+        --bg-tertiary: var(--selection);
+        --bg-secondary-surface: var(--dark-background);
+        --bg-elevated-secondary: var(--background);
+        --theme-secondary-btn-bg: var(--dark-background);
+        --interactive-bg-secondary-selected: var(--background);
+        --interactive-bg-secondary-hover: var(--background);
+        --interactive-bg-tertiary-hover: var(--background);
+        --menu-item-active: var(--background);
+        --theme-user-msg-bg: var(--selection);
+        --text-primary: #f8f8f2;
+        --menu-item-highlighted: var(--background);
+    }
 
-		--dark-background: #20212B;
-		--background: #282a36;
-		--comment: #6272A4;
-		--selection: #44475A;
-		--cyan: #8BE9FD;
-		--orange: #FFB86C;
-		--yellow: #F1FA8C;
-		--pink: #FF79C6;
-		--purple: #BD93F9;
-		--green: #50FA7B;
-	}
+    /* Light buttons in dark mode */
+    .btn-primary:where(.dark, .dark *):not(
+            :where(.dark .light, .dark .light *)
+        ) {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        border: 1px solid var(--border-medium);
+    }
 
-	.dark, htlm.dark[data-oled], html.dark[data-oled] :not(:where(.light,.light *)) {
-		--main-surface-primary: var(--dark-background);
-		--main-surface-secondary: var(--background);
-		--bg-primary: var(--background);
-		--bg-secondary: var(--selection);
-		--bg-tertiary: var(--selection);
-		--bg-secondary-surface: var(--dark-background);
-		--bg-elevated-secondary: var(--background);
-		--theme-secondary-btn-bg: var(--dark-background);
-		--interactive-bg-secondary-selected: var(--background);
-		--interactive-bg-secondary-hover: var(--background);
-		--interactive-bg-tertiary-hover: var(--background);
-		--menu-item-active: var(--background);
-		--theme-user-msg-bg: var(--selection);
-		--text-primary: #F8F8F2;
-		--menu-item-highlighted: var(--background);
-		
-	}
-	
-	/* Light buttons in dark mode */
-	.btn-primary:where(.dark,.dark *):not(:where(.dark .light,.dark .light *)) {
-		background-color: var(--bg-primary);
-		color: var(--text-primary);
-		border: 1px solid var(--border-medium);
-	}
-	
-	/* Toggle view */
-	.dark\:bg-gray-1000:where(.dark,.dark *):not(:where(.dark .light,.dark .light *)) {
-		background-color: var(--main-surface-primary);
-	}
-	
-	/* Buttons on hover */
-	.composer-btn:where(:not(:disabled,:active)):hover {
-    	background-color: var(--selection) !important
-	}
-	
-	/* Popup menus */
-	.dark\:bg-\[\#353535\]:where(.dark,.dark *):not(:where(.dark .light,.dark .light *)) {
-		background-color: var(--main-surface-primary);
-	}
-	
-	/* Input */
-	input[type="checkbox"]{
-		color: var(--selection);
-	}
-	
-	/* Blockquotes */
-	blockquote
-	{
-		background-color: var(--bg-elevated-secondary);
-		border-radius: 5px;
-	}
-	
-	blockquote::after{
-		background-color: var(--green) !important
-	}
-	
-	/* Inline Code */
-	p code {
-		background-color: var(--selection);
-	}
-	
-	/* HTLM Tags */
-	.ͼ13 {
-		color: var(--text-primary);
-	}
-	
-	/* Subtitles, Bold */
-	h2, strong{
-		color: var(--orange)
-	}
-	
-	/* Strings */
-	.ͼz{
-		color: var(--yellow)
-	}
-	
-	/* Command flags */
-	.ͼ12, .ͼv{
-		color: var(--pink)
-	}
-	
-	/* Commands, Titles, Striketrough, Clasess, Constants */
-	h1, del, .ͼy, .ͼ10{
-		color: var(--purple)
-	}
-	
-	h1 {
-		font-weight: bold;
-	}
-	
-	/* Terminal variables, Italics, Decorated Links */
-	em, .decorated-link, .ͼ11{
-		color: var(--green)
-	}
-	
+    /* Toggle view */
+    .dark\:bg-gray-1000:where(.dark, .dark *):not(
+            :where(.dark .light, .dark .light *)
+        ) {
+        background-color: var(--main-surface-primary);
+    }
+
+    /* Buttons on hover */
+    .composer-btn:where(:not(:disabled, :active)):hover {
+        background-color: var(--selection) !important;
+    }
+
+    /* Popup menus */
+    .dark\:bg-\[\#353535\]:where(.dark, .dark *):not(
+            :where(.dark .light, .dark .light *)
+        ) {
+        background-color: var(--main-surface-primary);
+    }
+
+    /* Chat Input Block */
+    .dark\:bg-\[\#2a2a2a\]:where(.dark, .dark *):not(
+            :where(.dark .light, .dark .light *)
+        ) {
+        background-color: var(--bg-primary);
+    }
+
+    /* Input */
+    input[type="checkbox"] {
+        color: var(--selection);
+    }
+
+    /* Blockquotes */
+    blockquote {
+        background-color: var(--bg-elevated-secondary);
+        border-radius: 5px;
+    }
+
+    blockquote::after {
+        background-color: var(--green) !important;
+    }
+
+    /* Inline Code */
+    p code {
+        background-color: var(--selection);
+    }
+
+    /* HTLM Tags */
+    .ͼ13 {
+        color: var(--text-primary);
+    }
+
+    /* Subtitles, Bold */
+    h2,
+    strong {
+        color: var(--orange);
+    }
+
+    /* Strings */
+    .ͼz {
+        color: var(--yellow);
+    }
+
+    /* Command flags */
+    .ͼ12,
+    .ͼv {
+        color: var(--pink);
+    }
+
+    /* Commands, Titles, Striketrough, Clasess, Constants */
+    h1,
+    del,
+    .ͼy,
+    .ͼ10 {
+        color: var(--purple);
+    }
+
+    h1 {
+        font-weight: bold;
+    }
+
+    /* Terminal variables, Italics, Decorated Links */
+    em,
+    .decorated-link,
+    .ͼ11 {
+        color: var(--green);
+    }
 }
