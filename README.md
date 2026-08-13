@@ -12,9 +12,9 @@ All instructions can be found at [draculatheme.com/chatgpt](https://draculatheme
 
 This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/chatgpt/graphs/contributors).
 
-| [![Universe](https://github.com/UniverseKing654.png?size=100)](https://github.com/UniverseKing654) |
-| -------------------------------------------------------------------------------------------------- |
-| [Universe](https://github.com/UniverseKing654)                                                     |
+| [![Universe](https://github.com/gdiazcr.png?size=100)](https://github.com/gdiazcr) |
+| ---------------------------------------------------------------------------------- |
+| [Universe](https://github.com/gdiazcr)                                             |
 
 ## Community
 
