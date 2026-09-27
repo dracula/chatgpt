@@ -79,6 +79,15 @@
         background-color: var(--bg-primary);
     }
 
+    /* Writing block body (markdown, text, email and document editors).
+       Scoped to the writing-block container so the generic utility class
+       does not leak elsewhere, and given a higher specificity than
+       ChatGPT's own rule because the component's stylesheet is loaded
+       lazily and can otherwise win on source order. */
+    html.dark [data-writing-block="true"] .relative.z-\[1\] {
+        background-color: var(--bg-primary) !important;
+    }
+
     /* Input */
     input[type="checkbox"] {
         color: var(--selection);
